@@ -21,7 +21,7 @@
 //===========================================================================
 
 //#define ENDER2_PRO     //Requires Motor Adapter Cable from TH3D due to stock connections using 5 pins
-//#define ENDER3
+#define ENDER3
 //#define ENDER3_NEO
 //#define ENDER3_MAX
 //#define ENDER3_MAX_NEO
@@ -67,7 +67,7 @@
 //#define ENDER6_OEM
 //#define ENDER6_PETSFANG //Source: https://support.th3dstudio.com/helpcenter/ender-6-5015-ezabl-petsfang-mount/
 //#define SPRITE_EXTRUDER_18MM_MOUNT // Mounts to the stock CRTouch bracket
-//#define CUSTOM_PROBE
+#define CUSTOM_PROBE
 
 // Ender 3 NEO Series/Ender 3 V2 LCD - LCD Setting
 // If you converted your Ender 3 NEO Series OR V2 LCD to the 12864 Version, Uncomment the below line.
@@ -105,7 +105,7 @@
 #define EZABL_POINTS 3
 
 // Probe Edge - How far from the edge of the bed to probe from. Use 50 if using binder clips. This also sets the edge inset value for MANUAL_MESH_LEVELING.
-#define EZABL_PROBE_EDGE 35
+#define EZABL_PROBE_EDGE 50
 
 // Fast Probing - Works with most machines and all EZABL sensors (8mm/s)
 #define EZABL_FASTPROBE
@@ -160,7 +160,7 @@
   * If the probe is left of the nozzle the offset on X is NEGATIVE
   * If the probe is in front of the nozzle the offset on Y is NEGATIVE
   */
-  #define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 }
+  #define NOZZLE_TO_PROBE_OFFSET { -44, -42, 0 }
 #endif
 
 
@@ -202,8 +202,8 @@
 
 // If you have a hotend and thermistor capable of over 290C you can set the max temp value below.
 // Setting this higher than 290C on a stock or traditional thermistor will damage it. Refer to your thermistor documentation to see what max temp is.
-//#define HIGH_TEMP_THERMISTOR
-#define HIGH_TEMP_THERMISTOR_TEMP 350
+#define HIGH_TEMP_THERMISTOR
+#define HIGH_TEMP_THERMISTOR_TEMP 300
 
 // BED THERMISTOR SETTINGS -------------------------
 
@@ -301,7 +301,7 @@
 
 // FINE BABYSTEPPING -------------------------------
 // Enabling the below line will set the babystep resolution from 0.025mm to 0.010mm for finer control.
-//#define FINE_BABYSTEPPING
+#define FINE_BABYSTEPPING
 
 // LINEAR ADVANCE ----------------------------------
 // See here on how to use Linear Advance: http://marlinfw.org/docs/features/lin_advance.html
@@ -313,9 +313,9 @@
 // There are 2 ways to connect the BL Touch to the V4.2.X boards - All on the 5 pin header or using 3 pins on the 5 pin header + Z Endstop port
 // For details on these 2 types of connections refer to our help center article here: https://support.th3dstudio.com/helpcenter/creality-v4-2-2-v4-2-7-board-bl-touch-wiring-options/
 // If you want to use the BL-Touch uncomment the BLTOUCH line below and uncomment #define CUSTOM_PROBE above and then enter in your offsets above in the CUSTOM PROBE section.
-//#define BLTOUCH
+#define BLTOUCH
 // If you are using the 5 pin header for all the BL Touch connections, uncomment the below line
-//#define BLTOUCH_ON_5PIN
+#define BLTOUCH_ON_5PIN
 
 // MANUAL MESH LEVELING ----------------------------
 // If you want to use manual mesh leveling you can enable the below option. This is for generating a MANUAL mesh WITHOUT a probe.
